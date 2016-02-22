@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="id.technomotion.keyboardheight.MainActivity">
+
+    <ListView
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Hello World!"
+        android:choiceMode="singleChoice" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ToggleButton
+            android:id="@+id/toggle_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="keyboard"
+            android:textOn="emoticon"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/footer_for_emoticons"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/keyboard_height"
+        android:background="@android:color/transparent"
+        android:visibility="gone"/>
+</LinearLayout>
